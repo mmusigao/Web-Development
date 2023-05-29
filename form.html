@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+
+    <nav>
+        <a class="logo" href="index.html"><img src="images/resized logo 2.png" width="80" height="auto"></a>
+        <a class="home1" href="index.html"></a>
+        <a class="home" href="index.html">Home</a>
+        <a class="movies" href="movies.html">Movies</a>
+        <a class="tvshows" href="tvshows.html">TV Shows</a>
+        <a class="collectables" href="collectables.html">Collectables</a>
+        <a class="gamesandapps" href="gamesandapps.html">Games & Apps</a>
+        <a class="about" href="about.html">About</a>
+        <input type="text" placeholder="Search..">
+
+
+    </nav>
+
+
+
+
+
+
+
+
+
+
+    <div id="form">
+    <form action="/action_page.php" method="post">
+        <label for="firstname" style="display: block;"> First Name</label>
+        <input type="text" style="display: block;"name="fname" required>
+        <label for="Lastname" style="display: block;">Last Name</label>
+        <input type="text" style="display:block;" name="lname" required>
+        
+        <label for="country" style="display: block;">Country</label>
+        <select style="display: block;">
+            <option value="usa">United States of America</option>
+            <option value="canada">Canada</option>
+            <option value="usa">Botswana</option>
+            <option value="UK">United Kingdom</option>
+            <option value="India">India</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="Subject" style="display: block;">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          <input type="submit" value="Submit">
+
+       
+          <footer>
+            <a class="feedback" href="form.html">Talk To US</a>
+    
+        <a href="feedback.html" class="socialfacebook"><img src="images/faceebook.png" alt="faceebook" title="faceebook" height="35px"></a>
+        <a href="feedback.html" class="socialtwitter"><img src="images/twitter.png" alt="twitter" title="twitter" height="35px"></a>
+        <a href="feedback.html" class="socialyoutube"><img src="images/youtube.png" alt="youtube" title="youtube" height="35px"></a>
+        <a href="feedback.html" class="socialinstagram"><img src="images/instagram.png" alt="instagram" title="instagram" height="35px"></a>
+        </footer>
+    
+    
+    </form>
+      </div>
+</body>
+</html>

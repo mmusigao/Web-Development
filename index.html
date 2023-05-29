@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+
+<style>
+
+    .home {
+        background-color: black;
+    }
+
+
+    * {box-sizing: border-box;}
+    body {font-family: Verdana, sans-serif;}
+    .mySlides {display: none;}
+    img {vertical-align: middle; margin-bottom: 20px;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Caption text */
+
+    .text {
+      color:rgba(127, 234, 237, 1) ;
+      font-size: 23px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+      
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: rgba(127, 234, 237, 1);
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active {
+      background-color: black;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .text {font-size: 11px}
+    }
+
+
+    div.trending {
+  border: 1px solid #ccc;
+  display: inline-block;
+  clear:both;
+}
+
+div.trending:hover {
+  border: 1px solid #777;
+}
+
+div.trending img {
+    float: left;
+    width: 300px;
+    height: 150px;
+    object-fit:fill;
+    margin-bottom: 30px;
+}
+
+div.description {
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+.responsivegallary {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ </style>
+</head>
+<body>
+    <nav>
+        <a class="logo" href="index.html"><img src="images/resized logo 2.png" width="80" height="auto"></a>
+        <a class="home" href="index.html">Home</a>
+        <a class="movies" href="movies.html">Movies</a>
+        <a class="tvshows" href="tvshows.html">TV Shows</a>
+        <a class="collectables" href="collectables.html">Collectables</a>
+        <a class="gamesandapps" href="gamesandapps.html">Games & Apps</a>
+        <a class="about" href="about.html">About</a>
+        <input type="text" placeholder="Search..">
+
+    </nav>
+
+    <br>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 4</div>
+          <img src="slideshow1.jpg" style="width:100%" alt="dune part two" title="dune part two movie" onclick = "myFunction">
+          <div class="text">MOVIES</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 4</div>
+          <img src="slideshow2.jpg" style="width:100%" alt="you tv show" title="you tv show">
+          <div class="text">TV SHOWS</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 4</div>
+          <img src="slideshow3.jfif" style="width:100%" alt="warner bros collectables" title="warner bros collectables">
+          <div class="text">COLLECTABLES</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="slideshow4.jpg" style="width:100%" alt="batman" title="games and apps batman">
+            <div class="text">GAMES & APPS</div>
+        </div>
+        
+        
+        
+        
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span>
+       </div> 
+
+    </div>
+
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+
+        function myFunction() {
+            location.replace("movies.html")
+
+            function homeFunction() {
+                location.replace("index.html")
+            }
+}
+        </script>
+
+        <h1>New Releases</h1>
+
+        <div id="responsivegallary"> <!--creates container for trending-->
+            <div class="trending">
+                <a target="_blank" href="images/New_little_things.jpg"><img src="images/New_little_things.jpg" alt="little things" title="little things"></a>
+
+            <div class="description" font-color="white">New little things</div>
+
+            </div>   
+            <div class="trending">
+                <a target="_blank" href="images/New_matrix.jpeg"><img src="images/New_matrix.jpeg" alt="The matrix" title="the matrix"></a>
+
+            <div class="description" font-color="white">The matrix</div>
+         </div>
+
+             <div class="trending">
+                   <a target="_blank" href="images/New_mrs.davis.jpg"><img src="images/New_mrs.davis.jpg" alt="Mrs Davis" title="Mrs Davis"></a>
+
+            <div class="description" font-color="white">Mrs Davis</div>
+            </div>
+
+
+         <div class="trending">
+         <a target="_blank" href="images/new_velma.jpg"><img src="images/new_velma.jpg" alt="Velma" title="Velma"></a>
+
+     <div class="description" font-color="white">Velma</div>
+  </div>
+  </div>
+
+  <div class="clearfix"></div>
+
+<div style="padding:6px;">
+
+  <h1>Trending Now</h1>
+  <div id="responsivegallary2"> <!--creates container for trending-->
+    <div class="trending">
+        <a target="_blank" href="images/trendin_barbie.jpg"><img src="images/trendin_barbie.jpg" alt="Barbie the movie" title="Barbie"></a>
+
+    <div class="description" font-color="white">Barbie</div>
+
+    </div>   
+    <div class="trending">
+        <a target="_blank" href="images/trending_dark_night.jpg"><img src="images/trending_dark_night.jpg" alt="The Dark Night" title="The Dark Night"></a>
+
+    <div class="description" font-color="white">The Dark Night</div>
+ </div>
+
+     <div class="trending">
+           <a target="_blank" href="images/Aquaman_trending.jfif"><img src="images/Aquaman_trending.jfif" alt="Aquaman" title="Aquaman"></a>
+
+    <div class="description" font-color="white">Aquaman</div>
+    </div>
+
+
+ <div class="trending">
+ <a target="_blank" href="images/inception_trending.jpg"><img src="images/inception_trending.jpg" alt="The inception" title="The inception"></a>
+
+<div class="description" font-color="white">Velma</div>
+</div>
+</div>
+    
+    <footer>
+        <a class="feedback" href="feedback.html">Talk To US</a>
+
+    <a href="feedback.html" class="socialfacebook"><img src="images/faceebook.png" alt="faceebook" title="faceebook" height="35px"></a>
+    <a href="feedback.html" class="socialtwitter"><img src="images/twitter.png" alt="twitter" title="twitter" height="35px"></a>
+    <a href="feedback.html" class="socialyoutube"><img src="images/youtube.png" alt="youtube" title="youtube" height="35px"></a>
+    <a href="feedback.html" class="socialinstagram"><img src="images/instagram.png" alt="instagram" title="instagram" height="35px"></a>
+    
+        
+
+
+
+    </footer>
+</body>
+
+</html>

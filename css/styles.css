@@ -1,0 +1,136 @@
+/* set global settings */
+
+body {font-family: Arial, Helvetica, sans-serif; background-color: rgba(1, 63, 140, 1);}
+
+/* set navigation background color, width */
+nav{
+    width:100%;
+    overflow:auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+}
+
+/* set navigation list*/
+nav a{
+    text-decoration: none;
+    float: left;
+    padding: 12px;
+    color:rgba(127, 234, 237, 1);
+    font-size: 23px;
+}
+
+/* set navigation hover*/
+nav :hover{
+    background-color:rgba(20, 117, 255, 1);
+    
+}
+
+nav input[type=text] {
+float: right;
+padding: 6px;
+margin-top: 8px;
+margin-right: 16px;
+border: none;
+font-size: 17px;
+}
+
+footer{
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    height: -80%;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+
+
+/*setting display on the navigation*/
+@media screen and (max-width: 1020px) {
+       
+    .nav a {
+        float: none;
+        display: block;
+    }
+
+
+}
+
+.social {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 50%;
+  }
+  
+  .social:hover {
+    opacity: 0.7;
+}
+
+.social {
+    border-radius: 2px;
+
+
+}
+
+
+h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: lighter;
+}
+
+div.trending {
+    border: 1px solid #ccc;
+    display: inline-block;
+    clear:both;
+  }
+  
+  div.trending:hover {
+    border: 1px solid #777;
+  }
+  
+  div.trending img {
+      float: left;
+      width: 300px;
+      height: 150px;
+      object-fit:fill;
+      margin-bottom: 30px;
+  }
+  
+  div.description {
+    padding: 15px;
+    text-align: center;
+    color: white;
+  }
+  
+  .responsivegallary {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
